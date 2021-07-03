@@ -220,6 +220,17 @@ brand {
 }
 
 
+.nav-items{
+  display: flex; 
+  height: 40px;
+  width: 100%;
+  border-top: 1px solid var(--dm-border);
+  border-bottom: 1px solid var(--dm-border);
+  align-items: center;
+}
+.nav-items i{
+  margin-right: 5px;
+}
 
 
 
@@ -229,6 +240,7 @@ brand {
   position: relative;
   overflow: hidden;
   z-index: -1;
+  pointer-events: none;
 }
 
 .inp {
@@ -239,6 +251,7 @@ brand {
   border: none;
   background: #F2F2F2;
   border-radius: 3px;
+  /* pointer-events: none; */
 }
 
 .hint {
@@ -260,7 +273,6 @@ input:valid~.hint {
   color: var(--dm-body-bg);
   font-weight: bold;
 }
-
 .line {
   position: absolute;
   width: 100%;
@@ -283,8 +295,9 @@ input:valid~.hint {
   width: clamp(250px, 70%, 500px);
   background: var(--side-nav-bg);
   top: 0;
-  left: 0;
+  left: -100%;
   padding: 10px;
+  transition: left 0.3s;
 }
 
 .side-nav-owner-pic{

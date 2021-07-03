@@ -13,37 +13,52 @@
 <body class="with-bottom-nav with-top-nav ">
   <nav class="top-nav">
     <div class="nav-item-container">
-      <button>
+      <button onclick="sidebarToggle()">
         <i class="fa fa-hamburger"></i>
       </button>
       <brand>Lorem Ipsium</brand>
-      <button>
-        <i class="fa fa-moon" onclick="darkModeToggle()"></i>
+      <button onclick="darkModeToggle()">
+        <i class="fa fa-moon"></i>
       </button>
     </div>
   </nav>
   </span>
   <div class="container">
     
-    
-    <aside class="sidebar">
+    <aside id="sidebar" class="sidebar">
       <div class="sidebar-header sb">
         <div class="owner-box">
           <img src="/imgs/avtar.png" class="side-nav-owner-pic">
-          <span class="owner-name">
+          <h4 class="owner-name">
             Manoranjan Mishra
-          </span>
+          </h4>
         </div>
-        
         <div>
-          <button class="button">
+          <button onclick="sidebarToggle()" class="button">
             <i class="fa fa-arrow-left">
               Close
             </i>
           </button>
         </div>
       </div>
+      <div class="nav-items">
+        <i class="fa fa-home"></i>
+        <span class="nav-item-lable">Home</span>
+      </div>
+      <div class="nav-items">
+        <i class="fa fa-gamepad"></i>
+        <span class="nav-item-lable">Games</span>
+      </div>
+      <div class="nav-items">
+        <i class="fa fa-book-open"></i>
+        <span class="nav-item-lable">Some item</span>
+      </div>
+      <div class="nav-items">
+        <i class="fa fa-cogs"></i>
+        <span class="nav-item-lable">Settings</span>
+      </div>
     </aside>
+    
     
     
     <div class="cards">
