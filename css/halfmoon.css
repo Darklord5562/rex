@@ -232,14 +232,18 @@ brand {
   margin-right: 5px;
 }
 
-
+.overlay{
+  position: fixed;
+  inset: -100px;
+  background: var(--semi-trans);
+  z-index: 10;
+}
 
 
 .inp-cont {
   width: 100%;
   position: relative;
   overflow: hidden;
-  z-index: -1;
   pointer-events: none;
 }
 
@@ -298,6 +302,7 @@ input:valid~.hint {
   left: -100%;
   padding: 10px;
   transition: left 0.3s;
+  z-index: 100;
 }
 
 .side-nav-owner-pic{

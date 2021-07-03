@@ -38,12 +38,13 @@ function getCookie(cookieName) {
 
 
 var sidebar = document.getElementById('sidebar')
+var overlay = document.getElementById('overlay')
 function sidebarToggle(){
   if(sidebar.style.left == '0px'){
     sidebar.style.left = '-100%'
-    console.log('0')
   }else{
     sidebar.style.left = '0px'
-    console.log('#')
+    console.log(overlay)
+    overlay.classList.add('overlay')
   }
 }
