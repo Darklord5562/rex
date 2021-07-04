@@ -39,12 +39,13 @@ function getCookie(cookieName) {
 
 var sidebar = document.getElementById('sidebar')
 var overlay = document.getElementById('overlay')
+overlay.addEventListener('click', sidebarToggle)
 function sidebarToggle(){
   if(sidebar.style.left == '0px'){
     sidebar.style.left = '-100%'
+    overlay.classList.remove('overlay')
   }else{
     sidebar.style.left = '0px'
-    console.log(overlay)
     overlay.classList.add('overlay')
   }
 }

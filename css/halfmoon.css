@@ -8,7 +8,6 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-size: 16px;
   font-family: google-sans, Montserrat, Verdana, Geneva, Tahoma, sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,15 +15,13 @@ html {
   -webkit-transition: background 0.5s;
   transition: background 0.5
 }
+body, html{
+  font-size: 16px;
+}
+
 
 ul li {
   list-style-type: none;
-}
-
-li:before {
-  content: "•";
-  margin-right: 10px;
-  font-weight: bold;
 }
 
 legend,
@@ -35,7 +32,8 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  font-size: 18px;
+  padding: 20px 5px;
+  text-align: center;
 }
 
 :root {
@@ -71,9 +69,10 @@ nav {
   width: 100%;
   position: fixed;
   top: 0;
-  background: var(--text);
+  background: var(--dm-p1-text);
   padding: 0 5px;
   border-bottom: 1px solid #E4E4E4;
+  z-index: 2;
   /* box-shadow: 0 0 5px #9D9D9D; */
 }
 
@@ -99,6 +98,7 @@ button {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 10px;
+  width: 100%;
 }
 
 .block {
@@ -236,7 +236,7 @@ brand {
   position: fixed;
   inset: -100px;
   background: var(--semi-trans);
-  z-index: 10;
+  z-index: 3;
 }
 
 
@@ -244,7 +244,6 @@ brand {
   width: 100%;
   position: relative;
   overflow: hidden;
-  pointer-events: none;
 }
 
 .inp {
@@ -255,7 +254,10 @@ brand {
   border: none;
   background: #F2F2F2;
   border-radius: 3px;
-  /* pointer-events: none; */
+}
+
+p{
+  margin-top: 10px;
 }
 
 .hint {
@@ -280,16 +282,24 @@ input:valid~.hint {
 .line {
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 3px;
   left: -100%;
   bottom: 0;
-  background: var(--dm-p1-text);
+  background: #686FBD;
   transition: 0.2s;
 }
 
 .inp:focus~.line,
 .inp:valid~.line {
   left: 0px;
+}
+
+.fm-10{
+  font-size: 10px;
+}
+
+.t-center{
+  text-align: center;
 }
 
 
@@ -302,9 +312,8 @@ input:valid~.hint {
   left: -100%;
   padding: 10px;
   transition: left 0.3s;
-  z-index: 100;
+  z-index:4;
 }
-
 .side-nav-owner-pic{
   height: 70px;
   width: 70px;
@@ -317,4 +326,57 @@ input:valid~.hint {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.super-center{
+  display: grid;
+  place-items: center;
+}
+.t-50p{
+  top: 100px;
+}
+.p-relate{
+  position: relative;
+}
+
+
+.chat-box{
+  height: 60px;
+  align-items: center;
+}
+.pp{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.status{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: red;
+}
+.status[active]{
+  background: green;
+}
+.df{
+  display: flex;
+}
+.chat-status-time{
+  align-items: center;
+}
+.v-center{
+  align-items: center;
+}
+.chat-text-box{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.fm-12{
+  font-size: 12px;
+}
+.chat-name{
+  font-weight: bold;
+  text-align: left;
 }
