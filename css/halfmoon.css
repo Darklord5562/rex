@@ -340,9 +340,13 @@ input:valid~.hint {
 }
 
 
+
+
+
 .chat-box{
   height: 60px;
   align-items: center;
+  border-bottom: 1px solid var(--dm-border);
 }
 .pp{
   height: 50px;
@@ -359,24 +363,27 @@ input:valid~.hint {
 .status[active]{
   background: green;
 }
-.df{
-  display: flex;
-}
-.chat-status-time{
-  align-items: center;
-}
 .v-center{
   align-items: center;
 }
-.chat-text-box{
-  display: flex;
-  flex-direction: column;
+.hint-text{
+  color: #CCCCCC;
+}
+.text-box{
   margin-left: 10px;
+  height: 100%;
+  align-items: center;
+  width: clamp(200px, 50vw, 500px);
 }
 .fm-12{
   font-size: 12px;
 }
-.chat-name{
-  font-weight: bold;
-  text-align: left;
+.bgg{
+  background: green;
+}
+.profile-box{
+  align-items: center;
+}
+.last-text, .time{
+  color: var(--dm-p2-text);
 }
