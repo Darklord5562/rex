@@ -190,7 +190,7 @@ brand {
   background: var(--dm-btn-bg);
 }
 
-.dark-mode .fa,
+.dark-mode .fa:not(button),
 .dark-mode .dm-p1 {
   color: var(--text);
 }
