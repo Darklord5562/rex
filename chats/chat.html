@@ -11,57 +11,34 @@
   <link rel="stylesheet" href="css/halfmoon.css" type="text/css" media="all" />
 </head>
 
-<body class="with-bottom-nav with-top-nav ">
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-header sb">
-      <div class="owner-box">
-        <img src="/imgs/avtar.png" class="side-nav-owner-pic">
-        <h4 class="owner-name">
-          Manoranjan Mishra
-        </h4>
-      </div>
+<body class="">
+  <div id="overlay"></div>
+  <!----chat page name top bar--->
+  <div class="chat-box-div">
+    <div class="chat-nav sb">
+      <img class="pp-2" src="imgs/avtar.png" alt="">
+      <span class="owner-name">
+        Manoranjan Mishra
+      </span>
       <div>
-        <button onclick="sidebarToggle()" class="button">
-          <i class="fa fa-arrow-left">
-            Close
-          </i>
+        <button class="pp-2">
+          <i class="fa fa-plus"></i>
+        </button>
+        <button class="pp-2" onclick="darkModeToggle()">
+          <i class="fa fa-moon"></i>
         </button>
       </div>
     </div>
-    <div class="nav-items">
-      <i class="fa fa-home"></i>
-      <span class="nav-item-lable">Home</span>
-    </div>
-    <div class="nav-items">
-      <i class="fa fa-comments"></i>
-      <span class="nav-item-lable">Chats</span>
-    </div>
-    <div class="nav-items">
-      <i class="fa fa-gamepad"></i>
-      <span class="nav-item-lable">Games</span>
-    </div>
-    <div class="nav-items">
-      <i class="fa fa-book-open"></i>
-      <span class="nav-item-lable">Some item</span>
-    </div>
-    <div class="nav-items">
-      <i class="fa fa-cogs"></i>
-      <span class="nav-item-lable">Settings</span>
-    </div>
-  </aside>
-  <div id="overlay"></div>
-  <nav class="top-nav">
-    <div class="nav-item-container">
-      <button onclick="sidebarToggle()">
-        <i class="fa fa-hamburger"></i>
-      </button>
-      <brand>FreeThink</brand>
-      <button onclick="darkModeToggle()">
-        <i class="fa fa-moon"></i>
-      </button>
-    </div>
-  </nav>
-  
+  </div>
+  <!-- dropdown--->
+  <form class="" action="" method="get" accept-charset="utf-8">
+  <div class="chat-text-box">
+    <input type="text" id="text-inp">
+    <button class="pp-2" type="submit">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+  </div>
+  </form>
   <script src="js/app.js" type="text/javascript" charset="utf-8">
   </script>
 </body>

@@ -15,7 +15,9 @@ html {
   -webkit-transition: background 0.5s;
   transition: background 0.5
 }
-body, html{
+
+body,
+html {
   font-size: 16px;
 }
 
@@ -42,13 +44,17 @@ h6 {
   --alert-bg: #FBBC04;
   --tab-pointer: #8AB4F8;
   --side-nav-bg: #E0E0E0;
-  /*light*/
+  --nav-bg-2: #F1F1F1;
   --border: #cccccc;
+  --button-bg: #D2D2D2;
+  --input-bg: #D2D2D2;
+  --nav-bg: #DCDCDC;
   /*dark*/
   --dm-body-bg: #242526;
   --dm-nav-shadow: 0 0 5px #000;
-  --dm-button-bg: #5f6369;
+  --dm-button-bg: #313235;
   --dm-nav-bg: #202124;
+  --dm-nav-bg-2: #313131;
   --dm-icon: #E8EAED;
   --dm-head: #AECBFA;
   --dm-input-bg: #313235;
@@ -88,6 +94,7 @@ button {
   border-radius: 5px;
   border: 1px #F3F3F3;
   font-weight: 900;
+  background: var(--button-bg);
 }
 
 .button {
@@ -175,64 +182,32 @@ brand {
   justify-content: space-around;
 }
 
-/* dark mode settings */
-.dark-mode {
-  background: var(--dm-body-bg);
-  color: var(--dm-p1-text);
-}
-
-.dark-mode nav {
-  background: var(--dm-nav-bg);
-  border-bottom: 1px solid var(--dm-border);
-}
-
-.dark-mode .button {
-  background: var(--dm-btn-bg);
-}
-
-.dark-mode .fa:not(button),
-.dark-mode .dm-p1 {
-  color: var(--text);
-}
-
-.dark-mode .dm-p2 {
-  color: var(--dm-p2-text);
-}
-
-.dark-mode input {
-  background: var(--dm-input-bg);
-  color: var(--dm-p2-text);
-}
-
-.dark-mode input:focus~.hint,
-.dark-mode input:valid~.hint {
-  top: 10px;
-  font-size: 12px;
-  font-weight: bold;
-  color: var(--dm-p1-text);
-}
-
-.dark-mode .cards {
-  border: 1px solid var(--dm-border);
-}
-.dark-mode .sidebar{
-  background: var(--dm-side-nav-bg);
-}
 
 
-.nav-items{
-  display: flex; 
+
+
+
+
+
+
+
+
+
+
+.nav-items {
+  display: flex;
   height: 40px;
   width: 100%;
   border-top: 1px solid var(--dm-border);
   border-bottom: 1px solid var(--dm-border);
   align-items: center;
 }
-.nav-items i{
+
+.nav-items i {
   margin-right: 5px;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   inset: -100px;
   background: var(--semi-trans);
@@ -256,10 +231,6 @@ brand {
   border-radius: 3px;
 }
 
-p{
-  margin-top: 10px;
-}
-
 .hint {
   top: 50%;
   transform: translateY(-50%);
@@ -279,6 +250,7 @@ input:valid~.hint {
   color: var(--dm-body-bg);
   font-weight: bold;
 }
+
 .line {
   position: absolute;
   width: 100%;
@@ -294,16 +266,16 @@ input:valid~.hint {
   left: 0px;
 }
 
-.fm-10{
+.fm-10 {
   font-size: 10px;
 }
 
-.t-center{
+.t-center {
   text-align: center;
 }
 
 
-.sidebar{
+.sidebar {
   position: fixed;
   height: 100vh;
   width: clamp(250px, 70%, 500px);
@@ -312,30 +284,37 @@ input:valid~.hint {
   left: -100%;
   padding: 10px;
   transition: left 0.3s;
-  z-index:4;
+  z-index: 4;
 }
-.side-nav-owner-pic{
+
+.side-nav-owner-pic {
   height: 70px;
   width: 70px;
   border-radius: 10px;
 }
-.ownwer-name{
+
+.owner-name {
   font-weight: bold;
+  font-size: 18px;
+  margin-left: 5px;
 }
-.owner-box{
+
+.owner-box {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.super-center{
+.super-center {
   display: grid;
   place-items: center;
 }
-.t-50p{
+
+.t-50p {
   top: 100px;
 }
-.p-relate{
+
+.p-relate {
   position: relative;
 }
 
@@ -343,47 +322,179 @@ input:valid~.hint {
 
 
 
-.chat-box{
+.chat-box {
   height: 60px;
   align-items: center;
   border-bottom: 1px solid var(--dm-border);
 }
-.pp{
+
+.pp {
   height: 50px;
   width: 50px;
   border-radius: 50%;
 }
 
-.status{
+.status {
   height: 10px;
   width: 10px;
   border-radius: 50%;
   background: red;
 }
-.status[active]{
+
+.status[active] {
   background: green;
 }
-.v-center{
+
+.v-center {
   align-items: center;
 }
-.hint-text{
+
+.hint-text {
   color: #CCCCCC;
 }
-.text-box{
+
+.text-box {
   margin-left: 10px;
   height: 100%;
   align-items: center;
   width: clamp(200px, 50vw, 500px);
 }
-.fm-12{
+
+.fm-12 {
   font-size: 12px;
 }
-.bgg{
+
+.bgg {
   background: green;
 }
-.profile-box{
+
+.profile-box {
   align-items: center;
 }
-.last-text, .time{
+
+.last-text, .time {
   color: var(--dm-p2-text);
+}
+
+
+
+
+
+
+
+
+
+.chat-box-div {
+  width: 100%;
+}
+.chat-nav{
+   height: 45px;
+   padding: 0 10px;
+   align-items: center;
+   background: var(--nav-bg-2);
+}
+.pp-2{
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+.chat-text-box{
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  align-items: center;
+  width: 100%;
+  background: var(--nav-bg-2);
+}
+.chat-text-box input{
+  border: none;
+  outline: none;
+  background: var(--input-bg);
+  padding: 10px;
+  border-radius: 40px;
+  width: 100%;
+  display: flex;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* dark mode settings */
+.dark-mode {
+  background: var(--dm-body-bg);
+  color: var(--dm-p1-text);
+}
+
+.dark-mode nav {
+  background: var(--dm-nav-bg);
+  border-bottom: 1px solid var(--dm-border);
+}
+
+.dark-mode button{
+  background: var(--dm-button-bg);
+}
+.dark-mode .button {
+  background: var(--dm-btn-bg);
+}
+
+.dark-mode .fa{
+  color: #FFFFFF;
+}
+.dark-mode .dm-p1{
+  color: var(--text);
+}
+
+.dark-mode .dm-p2 {
+  color: var(--dm-p2-text);
+}
+
+.dark-mode input {
+  background: var(--dm-input-bg);
+  color: var(--dm-p2-text);
+}
+
+.dark-mode input:focus~.hint,
+.dark-mode input:valid~.hint {
+  top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--dm-p1-text);
+}
+
+.dark-mode .cards {
+  border: 1px solid var(--dm-border);
+}
+
+.dark-mode .sidebar {
+  background: var(--dm-side-nav-bg);
+}
+.dark-mode .chat-nav{
+  background: var(--dm-nav-bg);
+}
+
+.dark-mode .chat-text-box{
+  background: var(--dm-nav-bg);
 }
