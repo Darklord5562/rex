@@ -389,8 +389,10 @@ input:valid~.hint {
 }
 .chat-nav{
    height: 45px;
+   position: fixed;
    padding: 0 10px;
    align-items: center;
+   width: 100%;
    background: var(--nav-bg-2);
 }
 .pp-2{
@@ -409,6 +411,7 @@ input:valid~.hint {
   align-items: center;
   width: 100%;
   background: var(--nav-bg-2);
+  z-index: 5;
 }
 .chat-text-box input{
   border: none;
@@ -417,13 +420,48 @@ input:valid~.hint {
   padding: 10px;
   border-radius: 40px;
   width: 100%;
-  display: flex;
-  
 }
 
 
 
+.chat-body-box{
+  padding: 55px 10px;
+}
+.chat-holder{
+  width: 70%;
+  padding: 10px;
+  background: red;
+  margin-top: 5px;
+  border-radius: 5px;
+}
 
+
+/*
+.from-them:before{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid red;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+
+
+.from-them{
+  left: 0;
+}
+.from-me{
+  right;
+}
+
+
+
+*/
 
 
 
