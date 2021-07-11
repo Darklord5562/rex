@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo mode</title>
+  <link rel="stylesheet" href="css/all.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/fontawesome.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/halfmoon.css" type="text/css" media="all" />
+</head>
+
+<body class="with-bottom-nav with-top-nav ">
+  <div id="overlay"></div>
+  <nav class="top-nav">
+    <div class="nav-item-container">
+      <button onclick="sidebarToggle()">
+        <i class="fa fa-hamburger"></i>
+      </button>
+      <brand>Lorem Ipsium</brand>
+      <button onclick="darkModeToggle()">
+        <i class="fa fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header sb">
+      <div class="owner-box">
+        <img src="/imgs/avtar.png" class="side-nav-owner-pic">
+        <h4 class="owner-name">
+          Manoranjan Mishra
+        </h4>
+      </div>
+      <div>
+        <button onclick="sidebarToggle()" class="button">
+          <i class="fa fa-arrow-left">
+            Close
+          </i>
+        </button>
+      </div>
+    </div>
+    <div class="nav-items">
+      <i class="fa fa-home"></i>
+      <span class="nav-item-lable">Home</span>
+    </div>
+    <div class="nav-items">
+      <i class="fa fa-gamepad"></i>
+      <span class="nav-item-lable">Games</span>
+    </div>
+    <div class="nav-items">
+      <i class="fa fa-book-open"></i>
+      <span class="nav-item-lable">Some item</span>
+    </div>
+    <div class="nav-items">
+      <i class="fa fa-cogs"></i>
+      <span class="nav-item-lable">Settings</span>
+    </div>
+  </aside>
+  <div class="container">
+    <p>
+      <h2>These are the results of your dare to your friends</h2>
+    </p>
+    <div class="cards">
+      <div class="result" id="result">
+        <h4>No one has completed your dare.</h4>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
