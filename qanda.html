@@ -56,7 +56,7 @@
       <span class="nav-item-lable">Settings</span>
     </div>
   </aside>
-  <div class="container">
+  <div id="container" class="container">
     <div class="total-score sb">
       <p>
       No. of questions: <button>7/10</button>
@@ -65,36 +65,19 @@
         Score : <button>3</button>
       </p>
     </div>
-    <div class="ques">
-      Q1. Do you know this is a sample question which is going to beasked to your friend ?
+    <div class="ques" id="ques">
+      
     </div>
-    <div class="option-box">
-      <div class="label-box">
-        <input type="checkbox" name="ist" id="ist" />
-        <label for="ist">You knew that before</label>
-      </div>
-      <div class="label-box flash-green">
-        <input type="checkbox" name="second" id="second" />
-        <label class="opt" for="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio distinctio, molestiae alias.</label>
-      </div>
-      <div class="label-box flash-red">
-        <input type="checkbox" name="third" id="third" />
-        <label class="opt" for="third">You knew that before</label>
-      </div>
-      <div class="label-box">
-        <input type="checkbox" name="fourth" id="fourth" />
-        <label class="opt" for="fourth">You knew that before</label>
-      </div>
-      <div class="label-box flash-green">
-        <input type="checkbox" name="fifth" id="fifth" />
-        <label class="opt" for="fifth">You knew that before</label>
-      </div>
+    <div id="option-box" class="option-box">
+      
     </div>
+    
     <button class="button block mt-10">
       CONTINUE<i class="fa fa-arrow-right"></i>
     </button>
   </div>
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quiz.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
