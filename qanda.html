@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/all.css" type="text/css" media="all" />
   <link rel="stylesheet" href="css/fontawesome.css" type="text/css" media="all" />
   <link rel="stylesheet" href="css/halfmoon.css" type="text/css" media="all" />
-  
 </head>
 
 <body class="with-bottom-nav with-top-nav ">
@@ -24,13 +23,76 @@
       </button>
     </div>
   </nav>
-  <span class="spinner-box">
-    <span class="spinner">
-    </span>
-  </span>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header sb">
+      <div class="owner-box">
+        <img src="/imgs/avtar.png" class="side-nav-owner-pic">
+        <h4 class="owner-name">
+          Manoranjan Mishra
+        </h4>
+      </div>
+      <div>
+        <button onclick="sidebarToggle()" class="button">
+          <i class="fa fa-arrow-left">
+            Close
+          </i>
+        </button>
+      </div>
+    </div>
+    <div class="nav-items">
+      <i class="fa fa-home"></i>
+      <span class="nav-item-lable">Home</span>
+    </div>
+    <div class="nav-items">
+      <i class="fa fa-gamepad"></i>
+      <span class="nav-item-lable">Games</span>
+    </div>
+    <div class="nav-items">
+      <i class="fa fa-book-open"></i>
+      <span class="nav-item-lable">Some item</span>
+    </div>
+    <div class="nav-items">
+      <i class="fa fa-cogs"></i>
+      <span class="nav-item-lable">Settings</span>
+    </div>
+  </aside>
   <div class="container">
-    
-    
+    <div class="total-score sb">
+      <p>
+      No. of questions: <button>7/10</button>
+      </p>
+      <p>
+        Score : <button>3</button>
+      </p>
+    </div>
+    <div class="ques">
+      Q1. Do you know this is a sample question which is going to beasked to your friend ?
+    </div>
+    <div class="option-box">
+      <div class="label-box">
+        <input type="checkbox" name="ist" id="ist" />
+        <label for="ist">You knew that before</label>
+      </div>
+      <div class="label-box flash-green">
+        <input type="checkbox" name="second" id="second" />
+        <label class="opt" for="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio distinctio, molestiae alias.</label>
+      </div>
+      <div class="label-box flash-red">
+        <input type="checkbox" name="third" id="third" />
+        <label class="opt" for="third">You knew that before</label>
+      </div>
+      <div class="label-box">
+        <input type="checkbox" name="fourth" id="fourth" />
+        <label class="opt" for="fourth">You knew that before</label>
+      </div>
+      <div class="label-box flash-green">
+        <input type="checkbox" name="fifth" id="fifth" />
+        <label class="opt" for="fifth">You knew that before</label>
+      </div>
+    </div>
+    <button class="button block mt-10">
+      CONTINUE<i class="fa fa-arrow-right"></i>
+    </button>
   </div>
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 </body>
