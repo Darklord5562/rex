@@ -59,10 +59,12 @@
   <div id="container" class="container">
     <div class="total-score sb">
       <p>
-      No. of questions: <button>7/10</button>
+      No. of questions: <button id="ques-counter"></button>
+      /
+      <button id="total-ques"></button>
       </p>
       <p>
-        Score : <button>3</button>
+        Score : <button id="score"></button>
       </p>
     </div>
     <div class="ques" id="ques">
@@ -71,9 +73,12 @@
     <div id="option-box" class="option-box">
       
     </div>
+    <button id="next-btn" class="button block mt-10">
+      Continue
+    </button>
     
-    <button class="button block mt-10">
-      CONTINUE<i class="fa fa-arrow-right"></i>
+    <button id="submit-ans" class="button block mt-10">
+      Submit Answes
     </button>
   </div>
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>

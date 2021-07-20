@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload files to Manoranjan</title>
+    <style>
+      img{
+        height: 200px;
+      }
+      input[type="file"]{
+        height: 40px;
+        padding: 20px;
+        border-radius: 5px;
+        background: #0318FF;
+      }
+    </style>
+</head>
+
+<body>
+<input type="file" accept="*" onchange="loadFile(event)">
+<img id="output" />
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src)
+    }
+  };
+</script>
+</body>
+
+</html>

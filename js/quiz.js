@@ -1,10 +1,17 @@
 var queBox = document.getElementById('ques')
-var options = document.querySelectorAll('.label-box')
-var container = document.getElementById('container')
 var answerBox = document.getElementById('option-box')
-var btn = document.querySelectorAll('button')
-var currQueIndex = 0
+var nextBtn = document.getElementById('next-btn')
+var quesCounterBtn = document.getElementById('ques-counter')
+var score = document.getElementById('score')
+var totalQues = document.getElementById('total-ques')
+var attempted = document.getElementById('attempted')
+score.innerHTML = 0
 
+var currQueIndex = 0
+var arr = []
+var userAns
+
+nextBtn.addEventListener('click', submitAns)
 
 var questions = [
 'What do you put in WhatsApp status often?',
@@ -18,29 +25,70 @@ var answers = [
   , ['Alladin', 'Jinnie', 'Nothing', 'Another option'],
   ['Veg', 'Non-Veg']
   ]
-
-btn.forEach(function(i){
-  i.addEventListener('click', loadQues)
-})
-
-
-
+totalQues.innerHTML = questions.length
 
 
 
 
 function loadQues() {
-  let currQue = questions[currQueIndex]
-  queBox.innerHTML = currQue
-  var currOpts = answers[currQueIndex]
-  currOpts.forEach(function(i){
-    var newDiv = document.createElement('div')
-    newDiv.classList.add('label-box')
-    container.append(newDiv)
-    newDiv.innerHTML = i
-  })
-  currQueIndex++
+  quesCounterBtn.innerHTML = currQueIndex + 1
+  answerBox.innerHTML = ''
+  queBox.innerHTML = questions[currQueIndex]
+  var ans = answers[currQueIndex]
+  for (let ii = 0; ii < ans.length; ii++) {
+    var divMade = document.createElement('div')
+    divMade.setAttribute('class', 'label-box')
+    divMade.addEventListener('click', setAns)
+    divMade.innerHTML = ans[ii]
+    answerBox.appendChild(divMade)
+  }
 }
+
+
+
+function setAns(elem) {
+  var y = elem.target.parentNode.children
+  for (var i = 0; i < y.length; i++) {
+    y[i].classList.remove('flash-blue')
+  }
+  elem.target.classList.add('flash-blue')
+  userAns = elem.target.innerHTML
+  if (arr[currQueIndex]) {
+    arr[currQueIndex] = userAns
+  } else {
+    arr.push(userAns)
+  }
+}
+
+
+var counter = 0
+var end
+var counting = 0
+
+
+
+function submitAns() {
+  if (arr.length !== currQueIndex + 1) {
+    alert('Please select one of the options')
+  } else {
+    if (currQueIndex < arr.length) {
+      currQueIndex++
+      loadQues()
+      counting += 1
+      end = checkLastQue()
+      if (end) {
+        console.log('done')
+      }
+      counter += 1
+    }
+  }
+}
+
+
+function checkLastQue() {
+  return counting == questions.length ? true : false
+}
+
 
 
 

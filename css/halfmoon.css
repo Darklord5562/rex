@@ -505,6 +505,127 @@ input:valid~.hint {
   align-items: center;
 }
 
+#submit-ans{
+  display: none;
+}
+
+.chat-box-div {
+  width: 100%;
+}
+.chat-nav{
+   height: 45px;
+   position: fixed;
+   padding: 0 10px;
+   align-items: center;
+   width: 100%;
+   background: var(--nav-bg-2);
+}
+.pp-2{
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+.chat-text-box{
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  width: 100%;
+  left: 0;
+  background: var(--nav-bg-2);
+  z-index: 2;
+}
+.chat-text-box>*{
+  margin: 0 3px;
+}
+.chat-text-box input, .comment-action input{
+  border: none;
+  outline: none;
+  width: 65%;
+  background: var(--input-bg);
+  padding: 10px;
+  border-radius: 40px;
+  max-width: 100%;
+}
+
+
+
+.chat-body-box{
+  padding: 55px 10px;
+  position: static;
+  
+}
+.chat-holder{
+  width: 70%;
+  padding: 10px;
+  margin-top: 5px;
+  position: relative;
+  z-index: -10;
+}
+
+
+.from-me{
+  float:right;
+  border-radius: 10px 10px 0 10px;
+  background: var(--msg-og-bg);
+}
+
+.from-them{
+  float: left;
+  border-radius: 10px 10px 10px 0;
+  background: var(--msg-in-bg);
+}
+
+
+
+
+
+
+.blog-header{
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: left;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  border-bottom: 3px solid var(--dm-border);
+  margin-bottom: 10px;
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.comment{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.comment-text{
+  width: 85%;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.comment-pp{
+  width: 10%;
+}
+
+
+legend:before,
+legend:after
+{
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 60%;
+  background: #42445A;
+  transform: translateX(-50%);
+}
+
+
+
 
 
 

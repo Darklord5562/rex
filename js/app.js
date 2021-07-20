@@ -44,8 +44,10 @@ function sidebarToggle(){
   if(sidebar.style.left == '0px'){
     sidebar.style.left = '-100%'
     overlay.classList.remove('overlay')
+    body.style.overflow = 'initial'
   }else{
     sidebar.style.left = '0px'
     overlay.classList.add('overlay')
+    body.style.overflow = 'hidden'
   }
 }
